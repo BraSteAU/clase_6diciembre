@@ -61,11 +61,28 @@
 
 #Tablero de ajedres
 
-n=8
-for i in range(n):
-    for j in range(n):
-        if(i+j)%2==0:
-            print("⬛",end="")
-        else:
-            print("⬜",end="")
-    print()            
+# n=8
+# for i in range(n):
+#     for j in range(n):
+#         if(i+j)%2==0:
+#             print("⬛",end="")
+#         else:
+#             print("⬜",end="")
+#     print() 
+
+
+#Hacer trasposicion de matrices
+
+matriz=[
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+traspuesta=[[0]*3 for _ in range(3)]
+
+for i in range(3):
+    for j in range(3):
+        traspuesta[j][i]=matriz[i][j]
+
+for fila in traspuesta:
+    print(fila)
